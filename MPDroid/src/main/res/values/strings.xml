@@ -130,6 +130,10 @@
     <string name="playlistDeleted">Playlist %s deleted</string>
     <string name="deletePlaylist">Delete playlist</string>
     <string name="defaultConnection">Default connection</string>
+    <string name="roomBasedConnection">Room selection</string>
+    <string name="roomBasedSettingsDescription">Create different MPD-Servers</string>
+    <string name="roomBasedSettings">Room Settings</string>
+    <string name="chooseRoom">Choose a room</string>
     <string name="preferredConnection">Preferred connection</string>
     <string name="chooseWLAN">Choose a WLAN network</string>
     <string name="wlanBasedSettings">WLAN based connection</string>

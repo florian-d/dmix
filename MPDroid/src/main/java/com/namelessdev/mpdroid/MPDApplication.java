@@ -42,6 +42,7 @@ import android.util.Log;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -55,6 +56,8 @@ public class MPDApplication extends Application implements
     public static final String INTENT_ACTION_REFRESH = "com.namelessdev.mpdroid.action.ui.refresh";
 
     public static final String USE_LOCAL_ALBUM_CACHE_KEY = "useLocalAlbumCache";
+
+    public static final Collection<String> rooms = new ArrayList<>();
 
     private static final boolean DEBUG = false;
 
@@ -90,6 +93,11 @@ public class MPDApplication extends Application implements
     private ServiceBinder mServiceBinder;
 
     private SharedPreferences mSettings;
+
+    static {
+        rooms.add("Test1");
+        rooms.add("Test2");
+    }
 
     /**
      * Detect and log all found faults.

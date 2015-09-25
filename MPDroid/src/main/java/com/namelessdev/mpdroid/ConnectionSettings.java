@@ -136,14 +136,20 @@ public class ConnectionSettings extends PreferenceActivity {
         if (masterCategory == null) {
             Log.e(TAG, "Failed to find PreferenceCategory: " + KEY_CONNECTION_CATEGORY);
         } else {
-            if (getIntent().getStringExtra("SSID") != null) {
-                // WiFi-Based Settings
-                final String SSID = getIntent().getStringExtra("SSID");
-                createDynamicSettings(SSID, masterCategory);
+            if (getIntent().getStringExtra("ROOM") != null) {
+                // Room-Based Settings
+                final String room = getIntent().getStringExtra("ROOM");
+                createDynamicSettings(room, masterCategory);
             } else {
-                // Default settings
-                createDynamicSettings("", masterCategory);
-                masterCategory.setTitle(R.string.defaultSettings);
+                if (getIntent().getStringExtra("SSID") != null) {
+                    // WiFi-Based Settings
+                    final String SSID = getIntent().getStringExtra("SSID");
+                    createDynamicSettings(SSID, masterCategory);
+                } else {
+                    // Default settings
+                    createDynamicSettings("", masterCategory);
+                    masterCategory.setTitle(R.string.defaultSettings);
+                }
             }
         }
     }

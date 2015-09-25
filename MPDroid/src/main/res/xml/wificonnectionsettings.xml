@@ -26,6 +26,16 @@
                 android:title="@string/chooseWLAN" />
         </PreferenceScreen>
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/roomBasedConnection">
+        <PreferenceScreen
+            android:key="roomBasedScreen"
+            android:summary="@string/roomBasedSettingsDescription"
+            android:title="@string/roomBasedSettings">
+            <PreferenceCategory
+                android:key="roomBasedCategory"
+                android:title="@string/chooseRoom" />
+        </PreferenceScreen>
+    </PreferenceCategory>
     <PreferenceCategory
         android:key="defaultCategory"
         android:title="@string/defaultConnection"
